@@ -34,7 +34,7 @@ h1{
     border-bottom-style: solid;
     border-color: rgb(167, 167, 205);
 }
-.label-mem:after{
+.label-mem::after{
     content: "";
     display: inline-block;
     float: right;
@@ -45,7 +45,7 @@ h1{
     border-color: #007bff transparent transparent transparent;
     transform: translateY(60%);
 }
-.input-mem:checked ~ .label-mem:after{
+.input-mem:checked + .label-mem:after{
     width: 0;
     height: 0;
     border-style: solid;
@@ -67,9 +67,12 @@ h1{
     height: 20vw;
     width:20vw
 }
-.input-mem:checked ~ .block-img-mem{
+/*.input-mem #mem-1::before + .label-mem + .block-img-mem{
     display: block;
-}
-.input-mem:checked ~ .label-mem{
+}*/
+.input-mem:checked + .label-mem{
     color: #110dedc8;
+}
+.input-mem:checked + .label-mem + .block-img-mem{
+    display: block;
 }
