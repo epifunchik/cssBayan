@@ -1,3 +1,57 @@
 body{
+    width: 100vw;
+    background-color: rgb(243, 245, 229);
+    box-sizing: border-box;
+    font-size: 1em;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+h1{
+    font-size: 1.5em;
+    text-align: center;
+}
+.accordeon{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.block-mem{
+    width:20vw
+}
+
+.input-mem{
+    display: none;;
+    width: 0vw;
+    height: 0vw;
+}
+
+.label-mem{
     display: block;
+    cursor: pointer;
+    width: 20vw;
+    padding: 0.3em;
+    transition: 0.2s;
+    border-bottom-style: solid;
+    border-color: rgb(167, 167, 205);
+}
+.label-mem:hover{
+    color: blue;
+}
+.label-mem:hover + .block-img-mem{
+    display: block;
+}
+
+.block-img-mem{
+    display: none;
+}
+
+.img{
+    height: 20vw;
+    width:20vw
+}
+.input-mem:checked ~ .block-img-mem{
+    display: block;
+}
+.input-mem:checked ~ .label-mem{
+    color: #110dedc8;
 }
