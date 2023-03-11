@@ -34,6 +34,24 @@ h1{
     border-bottom-style: solid;
     border-color: rgb(167, 167, 205);
 }
+.label-mem:after{
+    content: "";
+    display: inline-block;
+    float: right;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0.6vw 0.3vw 0 0.3vw;
+    border-color: #007bff transparent transparent transparent;
+    transform: translateY(60%);
+}
+.input-mem:checked ~ .label-mem:after{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0.3vw 0.6vw 0.3vw;
+    border-color: transparent transparent #007bff transparent;
+}
 .label-mem:hover{
     color: blue;
 }
