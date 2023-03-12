@@ -2,7 +2,7 @@ body{
     width: 100vw;
     background-color: rgb(243, 245, 229);
     box-sizing: border-box;
-    font-size: 1em;
+    font-size: 1.5em;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
 }
@@ -16,7 +16,7 @@ h1{
     flex-direction: column;
 }
 .block-mem{
-    width:20vw
+    width:40vw
 }
 
 .input-mem{
@@ -28,12 +28,12 @@ h1{
 .label-mem{
     display: block;
     cursor: pointer;
-    width: 20vw;
     padding: 0.3em;
     transition: 0.2s;
     border-bottom-style: solid;
     border-color: rgb(167, 167, 205);
 }
+
 .label-mem::after{
     content: "";
     display: inline-block;
@@ -56,7 +56,8 @@ h1{
     color: blue;
 }
 .label-mem:hover + .block-img-mem{
-    display: block;
+    display: flex;
+    justify-content: center;
 }
 
 .block-img-mem{
@@ -67,12 +68,44 @@ h1{
     height: 20vw;
     width:20vw
 }
-/*.input-mem #mem-1::before + .label-mem + .block-img-mem{
-    display: block;
-}*/
+
 .input-mem:checked + .label-mem{
     color: #110dedc8;
 }
 .input-mem:checked + .label-mem + .block-img-mem{
-    display: block;
+    display: flex;
+    justify-content: center;
+    
+}
+
+@media screen and (min-width: 820px){
+    .block-mem{
+        width: 60vw;
+    }
+    .label-mem::after{
+        border-width: 1.3vw 1vw 0 1.3vw;  
+    }
+    .input-mem:checked + .label-mem:after{
+        border-width: 0 1vw 1.3vw 1vw; 
+    }
+    .img{
+        height: 40vw;
+        width:40vw
+    }
+}
+
+@media screen and (min-width: 320px){
+    .block-mem{
+        width: 90vw;
+    }
+    .label-mem::after{
+        border-width: 4vw 3vw 0 4vw;  
+    }
+    .input-mem:checked + .label-mem:after{
+        border-width: 0 3vw 4vw 3vw; 
+    }
+    .img{
+        height: 80vw;
+        width:80vw
+    }
 }
